@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edad de Mascotas</title>
+    <link rel="stylesheet" href="stilos.css">
+    <script type="text/javascript">
+        function Años() {
+
+            a = document.f1.txtnumero1.value;
+            c = parseInt(a) * parseInt(7);
+            d = (parseInt(16) * Math.log(parseInt(a))) + 31;
+            document.f1.txtresultado1.value=c;
+            document.f1.txtresultado2.value=d;
+        }
+    
+    </script>
+     
+</head>
+<body>
+    <div class="titulo">
+        <h1>EDAD DE MI MASCOTA</h1>
+    </div>
+    <center><img src="gatito.jpeg" ></center>
+        <div class="nombre"> Mufasa y Scar</div>
+    <form id="f1" name="f1">
+        <div class="contenedor">
+            <div>
+                <table>
+                    <tr>
+                        <td>Ingrese Numero 1:</td>
+                        <td><input type="text" name="txtnumero1" onkeyup="Años()"></td>
+                    </tr>
+    
+        
+                </table> 
+            </div>
+    
+            <div>
+                <table>
+                    <tr>
+                        <td>Años perro segun el mito:</td>
+                        <td><output type="text" name="txtresultado1" class="mito"></td>
+                    </tr>
+        
+                    <tr>
+                        <td>Años perro segun la realidad:</td>
+                        <td><output type="text" name="txtresultado2" class="realidad"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        
+    </form>
+    
+</body>
+</html>
