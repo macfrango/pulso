@@ -4,35 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edad de Mascotas</title>
+    <title>Cardiaco</title>
     <link rel="stylesheet" href="stilos.css">
     <script type="text/javascript">
-        function Años() {
+        function cardio() {
 
             a = document.f1.txtnumero1.value;
-            c = parseInt(a) * parseInt(7);
-            d = (parseInt(16) * Math.log(parseInt(a))) + 31;
+            b = document.f1.txtnumero2.value;
+            c = document.f1.txtnumero3.value;
+            d = ((parseInt(220) - parseInt(a)) - parseInt(b)) * (parseInt(c) * parseFloat(0.01)) + parseInt(b);
             e = Math.round(d);
-            document.f1.txtresultado1.value=c;
-            document.f1.txtresultado2.value=e;
+            document.f1.txtresultado1.value=e;
+
+
+            f = document.f1.txtnumero4.value;
+            g = document.f1.txtnumero5.value;
+            h = document.f1.txtnumero6.value;
+            i = (parseInt(206) - (parseFloat(0.88) * parseInt(f)) - parseInt(g)) * (parseInt(h) *  parseFloat(0.01)) + parseInt(g);
+            j = Math.round(i);
+            document.f1.txtresultado2.value=j;
         }
     
     </script>
      
 </head>
-<body>
+<header class="fondo">
+
+    <a class="logo">Cardio</a>  
     <div class="titulo">
-        <h1>EDAD DE MI MASCOTA</h1>
+        <h1>RIDMO CARDIACO</h1>
     </div>
-    <center><img src="gatito.jpeg" ></center>
-        <div class="nombre"> Mufasa y Scar</div>
+</header>
+    
+<body>
+    <div class="subtitulo">
+        <h2>CALCULADORA CARDIACA</h2>
+    </div>
+
     <form id="f1" name="f1">
         <div class="contenedor">
+            <div>Hombre</div>
             <div>
+                
                 <table>
+                    
                     <tr>
-                        <td>Ingrese Numero 1:</td>
-                        <td><input type="text" name="txtnumero1" onkeyup="Años()"></td>
+                        <td>Edad:</td>
+                        <td><input type="text" name="txtnumero1" onkeyup="cardio()"></td>  
+                    </tr>
+                    <tr>
+                        <td>Fr. de Reposo:</td>
+                        <td><input type="text" name="txtnumero2" onkeyup="cardio()"></td>  
+                    </tr>
+                    <tr>
+                        <td>Intencidad %(1-100):</td>
+                        <td><input type="text" name="txtnumero3" onkeyup="cardio()"></td>  
                     </tr>
     
         
@@ -42,20 +68,52 @@
             <div>
                 <table>
                     <tr>
-                        <td>Años perro segun el mito:</td>
+                        <td>Tu ridmo cardiaco es : </td>
                         <td><output type="text" name="txtresultado1" class="mito"></td>
                     </tr>
         
+                </table>
+            </div>
+            <div>Mujer</div>
+            <div>
+                <table>
+                    
                     <tr>
-                        <td>Años perro segun la realidad:</td>
-                        <td><output type="text" name="txtresultado2" class="realidad"></td>
+                        <td>Edad :</td>
+                        <td><input type="text" name="txtnumero4" onkeyup="cardio()"></td>  
                     </tr>
+                    <tr>
+                        <td>Fr. de Reposo:</td>
+                        <td><input type="text" name="txtnumero5" onkeyup="cardio()"></td>  
+                    </tr>
+                    <tr>
+                        <td>Intencidad %(1-100):</td>
+                        <td><input type="text" name="txtnumero6" onkeyup="cardio()"></td>  
+                    </tr>
+    
+        
+                </table> 
+            </div>
+    
+            <div>
+                <table>
+                    <tr>
+                        <td>Tu ridmo cardiaco es : </td>
+                        <td><output type="text" name="txtresultado2" class="mito"></td>
+                    </tr>
+        
+
                 </table>
             </div>
         </div>
         
         
     </form>
+    <div>
+
+    </div>
+
+    
     
 </body>
 </html>
